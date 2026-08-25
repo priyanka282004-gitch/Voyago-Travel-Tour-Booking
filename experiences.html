@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Experiences — VOYAGO</title>
+  <meta name="description" content="Discover handpicked travel experiences with Voyago: Culinary walks, wildlife safaris, extreme adventures, wellness retreats, and luxury cruises.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Voyago CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-voyago navbar-solid sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-3">🌍</span> VOYAGO<span>.</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link active" href="experiences.html">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="booking.html" class="btn btn-vy-accent">Plan a Trip <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BANNER -->
+  <header class="py-5 bg-dark text-white position-relative" 
+          style="background: linear-gradient(180deg, rgba(17, 42, 31, 0.85) 0%, rgba(17, 42, 31, 0.95) 100%), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+    <div class="container py-4 text-center">
+      <span class="eyebrow-text">UNFORGETTABLE MOMENTS</span>
+      <h1 class="display-4 font-serif text-white mb-3">Curated Travel Experiences</h1>
+      <p class="lead opacity-75 max-w-600 mx-auto">
+        Transform ordinary vacations into extraordinary lifelong memories with immersive, hand-tailored activity themes.
+      </p>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Experience 1: Culinary & Wine -->
+        <div class="col-lg-6">
+          <div class="bg-white rounded-4 overflow-hidden border shadow-sm h-100 d-flex flex-column">
+            <div style="height: 260px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80" alt="Culinary Wine Walk" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="eyebrow-text">GASTRONOMY</span>
+              <h3 class="font-serif fs-2 mb-2">Culinary & Wine Tastings</h3>
+              <p class="text-muted fs-6 mb-4">
+                Savor local flavors with guided night market food crawls, private chef masterclasses, and vineyard cellar tastings in France, Italy, and Bali.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold text-success fs-7">Gastronomy Itineraries</span>
+                <a href="tours.html" class="btn btn-sm btn-vy-primary">Explore Category <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 2: Wildlife & Safaris -->
+        <div class="col-lg-6">
+          <div class="bg-white rounded-4 overflow-hidden border shadow-sm h-100 d-flex flex-column">
+            <div style="height: 260px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800&q=80" alt="Wildlife Safari drive" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="eyebrow-text">NATURE & WILDLIFE</span>
+              <h3 class="font-serif fs-2 mb-2">Wildlife Expeditions & Safaris</h3>
+              <p class="text-muted fs-6 mb-4">
+                Encounter wild animals in their natural habitats. From national park safaris to whale watching and eco lodges.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold text-success fs-7">Wildlife Itineraries</span>
+                <a href="tours.html" class="btn btn-sm btn-vy-primary">Explore Category <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 3: Extreme Outdoor Adventure -->
+        <div class="col-lg-6">
+          <div class="bg-white rounded-4 overflow-hidden border shadow-sm h-100 d-flex flex-column">
+            <div style="height: 260px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=800&q=80" alt="Extreme Adventure Sports" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="eyebrow-text">ADRENALINE</span>
+              <h3 class="font-serif fs-2 mb-2">Extreme Outdoor Adventures</h3>
+              <p class="text-muted fs-6 mb-4">
+                Push your limits with high-altitude Himalayan trekking, scuba diving in pristine coral reefs, skydiving, and white-water rafting.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold text-success fs-7">Adventure Itineraries</span>
+                <a href="tours.html" class="btn btn-sm btn-vy-primary">Explore Category <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience 4: Holistic Wellness -->
+        <div class="col-lg-6">
+          <div class="bg-white rounded-4 overflow-hidden border shadow-sm h-100 d-flex flex-column">
+            <div style="height: 260px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Wellness Spa Resort" class="w-100 h-100 object-fit-cover">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="eyebrow-text">REJUVENATION</span>
+              <h3 class="font-serif fs-2 mb-2">Holistic Wellness & Spa</h3>
+              <p class="text-muted fs-6 mb-4">
+                Unplug from daily stress with luxury Ayurvedic spa treatments, oceanfront yoga sanctuaries, sound bath meditation, and natural thermal hot springs.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fw-bold text-success fs-7">Wellness Itineraries</span>
+                <a href="tours.html" class="btn btn-sm btn-vy-primary">Explore Category <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a href="index.html" class="navbar-brand text-white fs-2 fw-bold font-serif mb-3 d-inline-block">
+            🌍 VOYAGO<span class="text-warning">.</span>
+          </a>
+          <p class="text-white opacity-75 pe-lg-4 mb-4">
+            VOYAGO is a frontend portfolio project demonstrating a modern travel discovery and tour booking experience.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tour Packages</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Popular Destinations</a></li>
+            <li><a href="tours.html">Featured Tours</a></li>
+            <li><a href="experiences.html">Travel Experiences</a></li>
+            <li><a href="booking.html">Booking Demo</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Demo Information</h5>
+          <ul class="footer-links text-white opacity-75">
+            <li class="mb-2"><strong>Frontend Portfolio Project</strong></li>
+            <li class="mb-2">HTML5 · CSS3 · Bootstrap 5.3 · Vanilla JS</li>
+            <li class="d-flex align-items-center gap-2 mt-3">
+              <i class="bi bi-envelope-fill text-warning fs-5"></i>
+              <span>hello@voyago-demo.test</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-2 text-white opacity-50">&copy; 2026 VOYAGO Travel Platform. Frontend Portfolio Demo Project.</p>
+        <p class="mb-0 text-white opacity-40 fs-7">
+          VOYAGO is a fictional travel platform created for portfolio and educational demonstration purposes. It does not process real bookings, payments, authentication, or customer data.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

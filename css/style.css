@@ -1,0 +1,1173 @@
+/* ==========================================================================
+   VOYAGO — Travel & Tour Booking Platform
+   Custom CSS Architecture & Design System
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Google Fonts Import & Root CSS Variables
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --vy-primary: #1B4332;         /* Deep Forest Green */
+  --vy-primary-dark: #112A1F;    /* Dark Forest Green */
+  --vy-primary-light: #2D6A4F;   /* Medium Forest Green */
+  --vy-accent: #D4A373;          /* Warm Golden Amber */
+  --vy-accent-hover: #C38E5B;    /* Darker Amber */
+  --vy-accent-light: #FAF0E6;    /* Muted Soft Amber */
+  
+  /* Surfaces & Neutral Colors */
+  --vy-bg: #FAFAF7;              /* Warm Off-White / Ivory */
+  --vy-surface: #FFFFFF;         /* Card Pure White */
+  --vy-surface-muted: #F4F3EE;   /* Muted Section Gray/Beige */
+  --vy-text-main: #1D242B;       /* Deep Charcoal */
+  --vy-text-muted: #64748B;      /* Slate Gray Muted */
+  --vy-text-light: #94A3B8;      /* Light Slate */
+  --vy-border: #E5E7EB;          /* Light Border */
+  --vy-border-dark: #334E41;     /* Dark Border for Forest Green components */
+  
+  /* Typography */
+  --vy-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vy-font-serif: 'Playfair Display', Georgia, serif;
+  
+  /* Elevative Shadows & Effects */
+  --vy-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --vy-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --vy-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --vy-shadow-card: 0 10px 30px rgba(27, 67, 50, 0.06);
+  --vy-radius-sm: 8px;
+  --vy-radius-md: 16px;
+  --vy-radius-lg: 24px;
+  --vy-radius-full: 9999px;
+  
+  /* Transitions */
+  --vy-transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --------------------------------------------------------------------------
+   2. Base Styles & Typography Setup
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--vy-font-sans);
+  background-color: var(--vy-bg);
+  color: var(--vy-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .font-serif {
+  font-family: var(--vy-font-serif);
+  color: var(--vy-text-main);
+}
+
+.font-sans {
+  font-family: var(--vy-font-sans) !important;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--vy-transition);
+}
+
+/* Eyebrow / Category Tag Pill */
+.eyebrow-text {
+  font-family: var(--vy-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--vy-accent);
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow-badge {
+  background-color: rgba(212, 163, 115, 0.15);
+  color: #B87C41;
+  padding: 0.35rem 1rem;
+  border-radius: var(--vy-radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Custom Buttons */
+.btn-vy-primary {
+  background-color: var(--vy-primary);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--vy-radius-full);
+  border: 1px solid var(--vy-primary);
+  transition: var(--vy-transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-vy-primary:hover,
+.btn-vy-primary:focus {
+  background-color: var(--vy-primary-dark);
+  border-color: var(--vy-primary-dark);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27, 67, 50, 0.25);
+}
+
+.btn-vy-accent {
+  background-color: var(--vy-accent);
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--vy-radius-full);
+  border: 1px solid var(--vy-accent);
+  transition: var(--vy-transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-vy-accent:hover,
+.btn-vy-accent:focus {
+  background-color: var(--vy-accent-hover);
+  border-color: var(--vy-accent-hover);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(212, 163, 115, 0.3);
+}
+
+.btn-vy-outline {
+  background-color: transparent;
+  color: #FFFFFF;
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--vy-radius-full);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  transition: var(--vy-transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-vy-outline:hover {
+  background-color: #FFFFFF;
+  color: var(--vy-primary);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-vy-outline-dark {
+  background-color: transparent;
+  color: var(--vy-primary);
+  font-weight: 600;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--vy-radius-full);
+  border: 1.5px solid var(--vy-primary);
+  transition: var(--vy-transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-vy-outline-dark:hover {
+  background-color: var(--vy-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27, 67, 50, 0.15);
+}
+
+/* Arrow nudge animation on hover */
+.btn:hover .bi-arrow-right,
+a:hover .bi-arrow-right {
+  transform: translateX(4px);
+}
+.bi-arrow-right {
+  transition: transform 0.25s ease;
+}
+
+/* --------------------------------------------------------------------------
+   3. Navbar (Sticky & Glassmorphism Transition)
+   -------------------------------------------------------------------------- */
+.navbar-voyago {
+  padding: 1.25rem 0;
+  transition: var(--vy-transition);
+  background: transparent;
+  z-index: 1050;
+}
+
+.navbar-voyago.scrolled {
+  padding: 0.85rem 0;
+  background-color: rgba(27, 67, 50, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Inner page navbar version (always solid) */
+.navbar-voyago.navbar-solid {
+  background-color: var(--vy-primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.85rem 0;
+}
+
+.navbar-brand {
+  font-family: var(--vy-font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #FFFFFF !important;
+  letter-spacing: -0.5px;
+}
+
+.navbar-brand span {
+  color: var(--vy-accent);
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85) !important;
+  padding: 0.5rem 1rem !important;
+  position: relative;
+  transition: var(--vy-transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #FFFFFF !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: var(--vy-accent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  color: #FFFFFF;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* --------------------------------------------------------------------------
+   4. Hero Section
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(17, 42, 31, 0.55) 0%, rgba(17, 42, 31, 0.75) 100%),
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  padding-top: 100px;
+  padding-bottom: 120px;
+  color: #FFFFFF;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin-bottom: 2.25rem;
+}
+
+.hero-stats-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--vy-radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+}
+
+.hero-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   5. Floating Search Panel
+   -------------------------------------------------------------------------- */
+.search-panel-wrapper {
+  margin-top: -65px;
+  position: relative;
+  z-index: 20;
+}
+
+.search-panel-card {
+  background: #FFFFFF;
+  border-radius: var(--vy-radius-lg);
+  padding: 1.75rem 2rem;
+  box-shadow: var(--vy-shadow-lg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.search-input-group {
+  position: relative;
+}
+
+.search-input-group label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--vy-text-muted);
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
+.search-input-group .form-control,
+.search-input-group .form-select {
+  border: 1px solid var(--vy-border);
+  border-radius: var(--vy-radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-weight: 500;
+  color: var(--vy-text-main);
+  background-color: #FAFAF7;
+  font-size: 0.925rem;
+}
+
+.search-input-group .form-control:focus,
+.search-input-group .form-select:focus {
+  background-color: #FFFFFF;
+  border-color: var(--vy-primary);
+  box-shadow: 0 0 0 3px rgba(27, 67, 50, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+   6. Travel Categories Cards
+   -------------------------------------------------------------------------- */
+.category-card {
+  position: relative;
+  border-radius: var(--vy-radius-md);
+  overflow: hidden;
+  height: 240px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: var(--vy-shadow-sm);
+  transition: var(--vy-transition);
+}
+
+.category-card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.category-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(17, 42, 31, 0.85) 100%);
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.category-card-content {
+  position: relative;
+  z-index: 3;
+}
+
+.category-card-content h4 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.category-card-content p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--vy-shadow-card);
+}
+
+.category-card:hover img {
+  transform: scale(1.08);
+}
+
+.category-card:hover::after {
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(17, 42, 31, 0.95) 100%);
+}
+
+/* --------------------------------------------------------------------------
+   7. Popular Destination Cards
+   -------------------------------------------------------------------------- */
+#destinationsGrid,
+#spotlightGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.destination-card {
+  background: #FFFFFF;
+  border-radius: var(--vy-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--vy-border);
+  box-shadow: var(--vy-shadow-sm);
+  transition: var(--vy-transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--vy-shadow-lg);
+  border-color: rgba(27, 67, 50, 0.15);
+}
+
+.destination-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  min-height: 240px;
+  background-color: var(--vy-primary-dark);
+}
+
+.destination-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.destination-card:hover .destination-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.badge-location {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(27, 67, 50, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--vy-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-rating {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #FFFFFF;
+  color: var(--vy-text-main);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--vy-radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.badge-rating i {
+  color: #F59E0B;
+}
+
+.destination-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.destination-card-body h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.destination-card-body p {
+  color: var(--vy-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.destination-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vy-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-tag .label {
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  color: var(--vy-text-muted);
+  font-weight: 600;
+}
+
+.price-tag .amount {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--vy-primary);
+}
+
+/* Featured Large Destination Card */
+.destination-card-featured {
+  position: relative;
+  border-radius: var(--vy-radius-md);
+  overflow: hidden;
+  height: 100%;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.25rem;
+  color: #FFFFFF;
+  box-shadow: var(--vy-shadow-md);
+}
+
+.destination-card-featured img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.destination-card-featured::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 20%, rgba(17, 42, 31, 0.9) 100%);
+  z-index: 2;
+}
+
+.destination-featured-content {
+  position: relative;
+  z-index: 3;
+}
+
+.destination-card-featured:hover img {
+  transform: scale(1.06);
+}
+
+/* --------------------------------------------------------------------------
+   8. Featured Tour Package Cards
+   -------------------------------------------------------------------------- */
+.tour-card {
+  background: #FFFFFF;
+  border-radius: var(--vy-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--vy-border);
+  box-shadow: var(--vy-shadow-sm);
+  transition: var(--vy-transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tour-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--vy-shadow-lg);
+}
+
+.tour-img-wrapper {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.tour-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tour-card:hover .tour-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.tour-badge-offer {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: var(--vy-accent);
+  color: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--vy-radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tour-badge-duration {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(17, 42, 31, 0.85);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--vy-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.tour-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tour-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.825rem;
+  color: var(--vy-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.tour-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.tour-highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  font-size: 0.875rem;
+  color: var(--vy-text-muted);
+}
+
+.tour-highlights-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.tour-highlights-list li i {
+  color: var(--vy-primary-light);
+}
+
+/* --------------------------------------------------------------------------
+   9. Special Offer Banner
+   -------------------------------------------------------------------------- */
+.offer-banner {
+  background: linear-gradient(135deg, rgba(17, 42, 31, 0.92) 0%, rgba(27, 67, 50, 0.95) 100%),
+              url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  border-radius: var(--vy-radius-lg);
+  padding: 4rem 3rem;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--vy-shadow-lg);
+}
+
+.offer-banner h2 {
+  color: #FFFFFF;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.offer-banner p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  max-width: 580px;
+  margin-bottom: 2rem;
+}
+
+.offer-code-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px dashed var(--vy-accent);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--vy-radius-sm);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--vy-accent);
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. Why Voyago Features
+   -------------------------------------------------------------------------- */
+.feature-box {
+  background: #FFFFFF;
+  padding: 2.25rem 1.75rem;
+  border-radius: var(--vy-radius-md);
+  border: 1px solid var(--vy-border);
+  box-shadow: var(--vy-shadow-sm);
+  transition: var(--vy-transition);
+  height: 100%;
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+  border-color: rgba(27, 67, 50, 0.2);
+  box-shadow: var(--vy-shadow-card);
+}
+
+.feature-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: var(--vy-accent-light);
+  color: var(--vy-primary);
+  border-radius: var(--vy-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+  transition: var(--vy-transition);
+}
+
+.feature-box:hover .feature-icon-wrapper {
+  background: var(--vy-primary);
+  color: #FFFFFF;
+}
+
+.feature-box h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.feature-box p {
+  color: var(--vy-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   11. Featured Experiences Grid
+   -------------------------------------------------------------------------- */
+.experience-card {
+  position: relative;
+  border-radius: var(--vy-radius-md);
+  overflow: hidden;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  color: #FFFFFF;
+  box-shadow: var(--vy-shadow-sm);
+  transition: var(--vy-transition);
+}
+
+.experience-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.experience-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(17, 42, 31, 0.85) 100%);
+  z-index: 2;
+}
+
+.experience-card-top,
+.experience-card-bottom {
+  position: relative;
+  z-index: 3;
+}
+
+.experience-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: var(--vy-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #FFFFFF;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--vy-shadow-lg);
+}
+
+.experience-card:hover img {
+  transform: scale(1.08);
+}
+
+/* --------------------------------------------------------------------------
+   12. How Voyago Works (Process Steps)
+   -------------------------------------------------------------------------- */
+.step-card {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.step-number {
+  width: 56px;
+  height: 56px;
+  background: var(--vy-surface);
+  border: 2px solid var(--vy-accent);
+  color: var(--vy-primary);
+  border-radius: var(--vy-radius-full);
+  font-size: 1.2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: var(--vy-shadow-sm);
+  transition: var(--vy-transition);
+}
+
+.step-card:hover .step-number {
+  background: var(--vy-primary);
+  border-color: var(--vy-primary);
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+.step-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.step-card p {
+  color: var(--vy-text-muted);
+  font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. Travel Inspiration (Articles)
+   -------------------------------------------------------------------------- */
+.article-card {
+  background: #FFFFFF;
+  border-radius: var(--vy-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--vy-border);
+  box-shadow: var(--vy-shadow-sm);
+  transition: var(--vy-transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--vy-shadow-lg);
+}
+
+.article-img-wrapper {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.article-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.article-card:hover .article-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.article-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.article-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--vy-accent);
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.article-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.article-excerpt {
+  color: var(--vy-text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   14. Testimonials Cards
+   -------------------------------------------------------------------------- */
+.testimonial-card {
+  background: #FFFFFF;
+  border-radius: var(--vy-radius-md);
+  padding: 2rem;
+  border: 1px solid var(--vy-border);
+  box-shadow: var(--vy-shadow-sm);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--vy-transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--vy-shadow-md);
+  border-color: rgba(27, 67, 50, 0.15);
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  color: var(--vy-text-main);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--vy-radius-full);
+  object-fit: cover;
+}
+
+.author-info h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.author-info p {
+  font-size: 0.8rem;
+  color: var(--vy-text-muted);
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   15. Newsletter Capture Section
+   -------------------------------------------------------------------------- */
+.newsletter-box {
+  background: var(--vy-primary);
+  border-radius: var(--vy-radius-lg);
+  padding: 3.5rem 2.5rem;
+  color: #FFFFFF;
+  box-shadow: var(--vy-shadow-lg);
+}
+
+.newsletter-box h2 {
+  color: #FFFFFF;
+}
+
+.newsletter-form .form-control {
+  border-radius: var(--vy-radius-full);
+  padding: 0.85rem 1.5rem;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.newsletter-form .btn-vy-accent {
+  border-radius: var(--vy-radius-full);
+  padding: 0.85rem 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   16. Footer Architecture
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: var(--vy-primary-dark);
+  color: rgba(255, 255, 255, 0.75);
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--vy-border-dark);
+}
+
+.site-footer h5 {
+  color: #FFFFFF;
+  font-family: var(--vy-font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--vy-accent);
+  padding-left: 4px;
+}
+
+.social-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--vy-radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--vy-transition);
+}
+
+.social-icon-btn:hover {
+  background: var(--vy-accent);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 4rem;
+  font-size: 0.85rem;
+}
+
+/* --------------------------------------------------------------------------
+   17. Responsive Adjustments & Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .hero-section {
+    min-height: 80vh;
+    padding-top: 120px;
+    padding-bottom: 90px;
+  }
+  
+  .search-panel-wrapper {
+    margin-top: -40px;
+  }
+  
+  .destination-card-featured {
+    min-height: 320px;
+  }
+  
+  .offer-banner {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-voyago {
+    background-color: var(--vy-primary) !important;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.35rem;
+  }
+  
+  .search-panel-card {
+    padding: 1.25rem;
+  }
+  
+  .newsletter-box {
+    padding: 2.25rem 1.5rem;
+  }
+}

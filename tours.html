@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Packages — VOYAGO</title>
+  <meta name="description" content="Browse curated tour packages with Voyago. Filter by price, duration, and destination style to find your dream vacation.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Voyago CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-voyago navbar-solid sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-3">🌍</span> VOYAGO<span>.</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="booking.html" class="btn btn-vy-accent">Plan a Trip <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER BANNER -->
+  <header class="py-5 bg-dark text-white position-relative" 
+          style="background: linear-gradient(180deg, rgba(17, 42, 31, 0.85) 0%, rgba(17, 42, 31, 0.95) 100%), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+    <div class="container py-4 text-center">
+      <span class="eyebrow-text">CURATED PACKAGES</span>
+      <h1 class="display-4 font-serif text-white mb-3">Featured Tour Packages</h1>
+      <p class="lead opacity-75 max-w-600 mx-auto">
+        Structured itineraries designed for clear trip visualization, comfortable stays, and memorable experiences.
+      </p>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- SIDEBAR FILTERS (3 Cols) -->
+        <div class="col-lg-3">
+          <div class="bg-white p-4 rounded-4 border shadow-sm sticky-top" style="top: 100px;">
+            <h4 class="font-serif mb-4 pb-2 border-bottom">Filter Tours</h4>
+            
+            <!-- Category Filter -->
+            <div class="mb-4">
+              <label class="fw-bold text-uppercase fs-7 text-muted mb-2 d-block">Travel Category</label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="catAll" checked>
+                <label class="form-check-label fs-7" for="catAll">All Categories</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="catSouthIndia">
+                <label class="form-check-label fs-7" for="catSouthIndia">South India</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="catBeach">
+                <label class="form-check-label fs-7" for="catBeach">Beach Holidays</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="catMountain">
+                <label class="form-check-label fs-7" for="catMountain">Mountain & Trekking</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="catCultural">
+                <label class="form-check-label fs-7" for="catCultural">Cultural Heritage</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="catLuxury">
+                <label class="form-check-label fs-7" for="catLuxury">Luxury Escape</label>
+              </div>
+            </div>
+
+            <!-- Duration Filter -->
+            <div class="mb-4">
+              <label class="fw-bold text-uppercase fs-7 text-muted mb-2 d-block">Duration</label>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="durShort">
+                <label class="form-check-label fs-7" for="durShort">3 – 5 Days</label>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="durMed">
+                <label class="form-check-label fs-7" for="durMed">6 – 8 Days</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="durLong">
+                <label class="form-check-label fs-7" for="durLong">9+ Days</label>
+              </div>
+            </div>
+
+            <!-- Price Range -->
+            <div class="mb-4">
+              <label for="priceRange" class="fw-bold text-uppercase fs-7 text-muted mb-2 d-block">Max Budget (INR)</label>
+              <input type="range" class="form-range" id="priceRange" min="15000" max="150000" step="5000" value="150000">
+              <div class="d-flex justify-content-between fs-7 text-muted fw-bold">
+                <span>₹15k</span>
+                <span class="text-success">Up to ₹1.5L</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-vy-primary w-100 fs-7">Apply Filters</button>
+          </div>
+        </div>
+
+        <!-- MAIN TOURS LIST (9 Cols) -->
+        <div class="col-lg-9">
+          <div class="row g-4">
+            
+            <!-- Tour 1: Madurai & Munnar -->
+            <div class="col-md-6">
+              <div class="tour-card">
+                <div class="tour-img-wrapper">
+                  <img src="images/Munnar.webp" alt="Munnar tea plantations and Western Ghats">
+                  <span class="tour-badge-offer">South India</span>
+                  <span class="tour-badge-duration"><i class="bi bi-clock"></i> 4 Days / 3 Nights</span>
+                </div>
+                <div class="tour-card-body">
+                  <div class="tour-meta">
+                    <span><i class="bi bi-geo-alt text-success"></i> Tamil Nadu & Kerala</span>
+                    <span><i class="bi bi-star-fill text-warning"></i> Temple & Tea</span>
+                  </div>
+                  <h3 class="tour-title">Madurai Temple & Munnar Tea Estate Retreat</h3>
+                  <ul class="tour-highlights-list">
+                    <li><i class="bi bi-check2-circle"></i> Madurai Meenakshi Temple Architecture Tour</li>
+                    <li><i class="bi bi-check2-circle"></i> Munnar Tea Garden Walk & Factory Tasting</li>
+                    <li><i class="bi bi-check2-circle"></i> Western Ghats Scenic Resort Stay</li>
+                  </ul>
+                  <div class="destination-card-footer">
+                    <div class="price-tag">
+                      <span class="label">Sample Price</span>
+                      <span class="amount">₹18,500</span>
+                    </div>
+                    <a href="tour-details.html" class="btn btn-sm btn-vy-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tour 2: Munnar & Alleppey -->
+            <div class="col-md-6">
+              <div class="tour-card">
+                <div class="tour-img-wrapper">
+                  <img src="images/Munnar.webp" alt="Tea plantations in Munnar, Kerala">
+                  <span class="tour-badge-offer">South India</span>
+                  <span class="tour-badge-duration"><i class="bi bi-clock"></i> 5 Days / 4 Nights</span>
+                </div>
+                <div class="tour-card-body">
+                  <div class="tour-meta">
+                    <span><i class="bi bi-geo-alt text-success"></i> Kerala, India</span>
+                    <span><i class="bi bi-star-fill text-warning"></i> Backwaters</span>
+                  </div>
+                  <h3 class="tour-title">Munnar Tea Hills & Alleppey Houseboat Experience</h3>
+                  <ul class="tour-highlights-list">
+                    <li><i class="bi bi-check2-circle"></i> Munnar Tea Garden & Waterfall Tour</li>
+                    <li><i class="bi bi-check2-circle"></i> Overnight Deluxe Houseboat Cruise</li>
+                    <li><i class="bi bi-check2-circle"></i> Spice Plantation Walk & Cooking Demo</li>
+                  </ul>
+                  <div class="destination-card-footer">
+                    <div class="price-tag">
+                      <span class="label">Sample Price</span>
+                      <span class="amount">₹24,000</span>
+                    </div>
+                    <a href="tour-details.html" class="btn btn-sm btn-vy-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tour 3: Bali -->
+            <div class="col-md-6">
+              <div class="tour-card">
+                <div class="tour-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80" alt="Tegallalang rice terraces and temple in Bali">
+                  <span class="tour-badge-offer">International</span>
+                  <span class="tour-badge-duration"><i class="bi bi-clock"></i> 5 Days / 4 Nights</span>
+                </div>
+                <div class="tour-card-body">
+                  <div class="tour-meta">
+                    <span><i class="bi bi-geo-alt text-success"></i> Bali, Indonesia</span>
+                    <span><i class="bi bi-star-fill text-warning"></i> Top Rated</span>
+                  </div>
+                  <h3 class="tour-title">Bali Tropical Bliss & Cultural Heritage</h3>
+                  <ul class="tour-highlights-list">
+                    <li><i class="bi bi-check2-circle"></i> Ubud Sacred Monkey Forest & Terraces</li>
+                    <li><i class="bi bi-check2-circle"></i> Private Beachfront Resort Stay</li>
+                    <li><i class="bi bi-check2-circle"></i> Sunset Catamaran Cruise</li>
+                  </ul>
+                  <div class="destination-card-footer">
+                    <div class="price-tag">
+                      <span class="label">Sample Price</span>
+                      <span class="amount">₹34,999</span>
+                    </div>
+                    <a href="tour-details.html" class="btn btn-sm btn-vy-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tour 4: Himalayan -->
+            <div class="col-md-6">
+              <div class="tour-card">
+                <div class="tour-img-wrapper">
+                  <img src="images/Mountain Escapes.jpeg" alt="Snow-capped Himalayan mountains in Manali">
+                  <span class="tour-badge-offer">Adventure</span>
+                  <span class="tour-badge-duration"><i class="bi bi-clock"></i> 7 Days / 6 Nights</span>
+                </div>
+                <div class="tour-card-body">
+                  <div class="tour-meta">
+                    <span><i class="bi bi-geo-alt text-success"></i> Himachal, India</span>
+                    <span><i class="bi bi-star-fill text-warning"></i> Mountain</span>
+                  </div>
+                  <h3 class="tour-title">Himalayan Alpine Adventure & Valleys</h3>
+                  <ul class="tour-highlights-list">
+                    <li><i class="bi bi-check2-circle"></i> Solang Valley Guided Trekking</li>
+                    <li><i class="bi bi-check2-circle"></i> Luxury Camping & Bonfire Nights</li>
+                    <li><i class="bi bi-check2-circle"></i> All Transfers & Local Guide Included</li>
+                  </ul>
+                  <div class="destination-card-footer">
+                    <div class="price-tag">
+                      <span class="label">Sample Price</span>
+                      <span class="amount">₹28,500</span>
+                    </div>
+                    <a href="tour-details.html" class="btn btn-sm btn-vy-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tour 5: Dubai -->
+            <div class="col-md-6">
+              <div class="tour-card">
+                <div class="tour-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Burj Khalifa and luxury skyline in Dubai">
+                  <span class="tour-badge-offer">Premium</span>
+                  <span class="tour-badge-duration"><i class="bi bi-clock"></i> 6 Days / 5 Nights</span>
+                </div>
+                <div class="tour-card-body">
+                  <div class="tour-meta">
+                    <span><i class="bi bi-geo-alt text-success"></i> Dubai, UAE</span>
+                    <span><i class="bi bi-star-fill text-warning"></i> Luxury</span>
+                  </div>
+                  <h3 class="tour-title">Dubai Desert Luxury & Skyscraper Experience</h3>
+                  <ul class="tour-highlights-list">
+                    <li><i class="bi bi-check2-circle"></i> Burj Khalifa 124th Floor Entry</li>
+                    <li><i class="bi bi-check2-circle"></i> VIP Desert Safari & Dune Bashing</li>
+                    <li><i class="bi bi-check2-circle"></i> Marina Yacht Sunset Dinner</li>
+                  </ul>
+                  <div class="destination-card-footer">
+                    <div class="price-tag">
+                      <span class="label">Sample Price</span>
+                      <span class="amount">₹54,999</span>
+                    </div>
+                    <a href="tour-details.html" class="btn btn-sm btn-vy-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tour 6: Swiss Alps -->
+            <div class="col-md-6">
+              <div class="tour-card">
+                <div class="tour-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="Swiss Alps Peaks">
+                  <span class="tour-badge-offer">Popular</span>
+                  <span class="tour-badge-duration"><i class="bi bi-clock"></i> 8 Days / 7 Nights</span>
+                </div>
+                <div class="tour-card-body">
+                  <div class="tour-meta">
+                    <span><i class="bi bi-geo-alt text-success"></i> Switzerland</span>
+                    <span><i class="bi bi-star-fill text-warning"></i> Top Rated</span>
+                  </div>
+                  <h3 class="tour-title">Swiss Alps Scenic Glacier Train & Lake Cruise</h3>
+                  <ul class="tour-highlights-list">
+                    <li><i class="bi bi-check2-circle"></i> Bernina Express Scenic Train Ride</li>
+                    <li><i class="bi bi-check2-circle"></i> Jungfraujoch Top of Europe Excursion</li>
+                    <li><i class="bi bi-check2-circle"></i> Lake Geneva Steamboat Tour</li>
+                  </ul>
+                  <div class="destination-card-footer">
+                    <div class="price-tag">
+                      <span class="label">Sample Price</span>
+                      <span class="amount">₹1,15,000</span>
+                    </div>
+                    <a href="tour-details.html" class="btn btn-sm btn-vy-primary">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a href="index.html" class="navbar-brand text-white fs-2 fw-bold font-serif mb-3 d-inline-block">
+            🌍 VOYAGO<span class="text-warning">.</span>
+          </a>
+          <p class="text-white opacity-75 pe-lg-4 mb-4">
+            VOYAGO is a frontend portfolio project demonstrating a modern travel discovery and tour booking experience.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tour Packages</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Popular Destinations</a></li>
+            <li><a href="destinations.html?filter=tamil-nadu">Tamil Nadu Tours</a></li>
+            <li><a href="tours.html">Featured Tours</a></li>
+            <li><a href="booking.html">Booking Demo</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Demo Information</h5>
+          <ul class="footer-links text-white opacity-75">
+            <li class="mb-2"><strong>Frontend Portfolio Project</strong></li>
+            <li class="mb-2">HTML5 · CSS3 · Bootstrap 5.3 · Vanilla JS</li>
+            <li class="d-flex align-items-center gap-2 mt-3">
+              <i class="bi bi-envelope-fill text-warning fs-5"></i>
+              <span>hello@voyago-demo.test</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-2 text-white opacity-50">&copy; 2026 VOYAGO Travel Platform. Frontend Portfolio Demo Project.</p>
+        <p class="mb-0 text-white opacity-40 fs-7">
+          VOYAGO is a fictional travel platform created for portfolio and educational demonstration purposes. It does not process real bookings, payments, authentication, or customer data.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

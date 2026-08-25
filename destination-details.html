@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Details — VOYAGO</title>
+  <meta name="description" content="Explore destination details, travel highlights, best seasons to visit, and recommended tour packages with VOYAGO.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Voyago CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-voyago navbar-solid sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-3">🌍</span> VOYAGO<span>.</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="booking.html" class="btn btn-vy-accent">Plan a Trip <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB & BANNER -->
+  <div class="bg-light py-3 border-bottom">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0 fs-7">
+          <li class="breadcrumb-item"><a href="index.html" class="text-success text-decoration-none">Home</a></li>
+          <li class="breadcrumb-item"><a href="destinations.html" class="text-success text-decoration-none">Destinations</a></li>
+          <li class="breadcrumb-item active" id="breadcrumbDestName" aria-current="page">Bali Island, Indonesia</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <main class="py-5">
+    <div class="container">
+      <!-- DESTINATION TITLE BAR -->
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
+        <div>
+          <span class="badge bg-warning text-dark fw-bold px-3 py-2 rounded-pill text-uppercase mb-2" id="destRegionBadge">
+            <i class="bi bi-geo-alt-fill me-1"></i> Featured Destination
+          </span>
+          <h1 class="display-5 font-serif mb-1" id="destTitle">Bali — Island of the Gods</h1>
+          <p class="text-muted mb-0"><i class="bi bi-compass-fill text-success me-1"></i> Curated Destination Guide & Travel Overview</p>
+        </div>
+        <div class="text-md-end">
+          <span class="d-block text-muted fs-7 text-uppercase fw-bold">Sample Tour Price</span>
+          <span class="fs-2 font-serif text-success fw-bold" id="destPrice">₹34,999</span>
+          <a href="booking.html" class="btn btn-vy-accent ms-md-3 mt-2 mt-md-0">Preview Booking</a>
+        </div>
+      </div>
+
+      <!-- MAIN GALLERY -->
+      <div class="row g-3 mb-5">
+        <div class="col-lg-8">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1200&q=80" id="destMainImg" alt="Featured Destination Main View" class="w-100 h-100 rounded-4 object-fit-cover" style="min-height: 400px;">
+        </div>
+        <div class="col-lg-4 d-flex flex-column gap-3">
+          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=600&q=80" alt="Destination View 2" class="w-100 rounded-4 object-fit-cover" style="height: 195px;">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Destination View 3" class="w-100 rounded-4 object-fit-cover" style="height: 195px;">
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <!-- LEFT CONTENT COLUMN -->
+        <div class="col-lg-8">
+          
+          <!-- OVERVIEW -->
+          <section class="mb-5">
+            <h3 class="font-serif fs-2 mb-3">Overview</h3>
+            <p class="lead text-muted fs-6 mb-3" id="destDescLead">
+              Immerse yourself in extraordinary natural landscapes, historical heritage sites, and serene retreats. From misty mountain peaks to tranquil beaches and architectural marvels, this destination offers an unforgettable travel experience.
+            </p>
+            <p class="text-muted fs-6">
+              Whether you are looking to explore ancient cultural monuments, indulge in boutique wellness resorts, or witness breathtaking natural sunsets, VOYAGO provides curated itinerary options tailored for comfortable exploration.
+            </p>
+          </section>
+
+          <!-- TOP HIGHLIGHTS -->
+          <section class="mb-5 bg-white p-4 rounded-4 border shadow-sm">
+            <h3 class="font-serif fs-2 mb-4">Top Destination Highlights</h3>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="feature-icon-wrapper p-2 rounded-circle fs-5 mb-0"><i class="bi bi-check-lg text-success"></i></div>
+                  <div>
+                    <h5 class="fw-bold mb-1">Historic & Cultural Sightseeing</h5>
+                    <p class="text-muted fs-7 mb-0">Explore iconic architectural monuments, sacred shrines, and heritage walking tours.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="feature-icon-wrapper p-2 rounded-circle fs-5 mb-0"><i class="bi bi-check-lg text-success"></i></div>
+                  <div>
+                    <h5 class="fw-bold mb-1">Scenic Natural Landscapes</h5>
+                    <p class="text-muted fs-7 mb-0">Experience pristine hill viewpoints, tranquil tea estates, lakes, and ocean beaches.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="feature-icon-wrapper p-2 rounded-circle fs-5 mb-0"><i class="bi bi-check-lg text-success"></i></div>
+                  <div>
+                    <h5 class="fw-bold mb-1">Authentic Local Cuisine</h5>
+                    <p class="text-muted fs-7 mb-0">Taste traditional delicacies, fresh coastal seafood, and regional specialty beverages.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex align-items-start gap-3">
+                  <div class="feature-icon-wrapper p-2 rounded-circle fs-5 mb-0"><i class="bi bi-check-lg text-success"></i></div>
+                  <div>
+                    <h5 class="fw-bold mb-1">Boutique Stay Retreats</h5>
+                    <p class="text-muted fs-7 mb-0">Relax in comfortable heritage resorts, mountain chalets, or oceanfront villas.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- BEST TIME TO VISIT -->
+          <section class="mb-5">
+            <h3 class="font-serif fs-2 mb-3">Best Time to Visit</h3>
+            <p class="text-muted mb-4">Plan your visit around ideal seasonal weather conditions.</p>
+            <div class="row g-3 text-center">
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded-4 border">
+                  <span class="badge bg-success mb-2">PEAK SEASON</span>
+                  <h5 class="fw-bold mb-1">October – March</h5>
+                  <p class="text-muted fs-7 mb-0">Cool, pleasant weather with clear skies. Ideal for sightseeing, heritage walks, and hill station treks.</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 bg-light rounded-4 border">
+                  <span class="badge bg-secondary mb-2">SHOULDER SEASON</span>
+                  <h5 class="fw-bold mb-1">April – June</h5>
+                  <p class="text-muted fs-7 mb-0">Warm summer months ideal for high-altitude hill escapes (Ooty, Kodaikanal, Munnar) and beach retreats.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- RIGHT SIDEBAR COLUMN -->
+        <div class="col-lg-4">
+          <div class="sticky-top" style="top: 100px;">
+            
+            <!-- QUICK FACTS CARD -->
+            <div class="bg-white p-4 rounded-4 border shadow-sm mb-4">
+              <h4 class="font-serif mb-3">Quick Travel Facts</h4>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted"><i class="bi bi-geo me-2"></i> Region</span>
+                  <span class="fw-semibold">Global / South Asia</span>
+                </li>
+                <li class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted"><i class="bi bi-translate me-2"></i> Language</span>
+                  <span class="fw-semibold">Regional / English</span>
+                </li>
+                <li class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted"><i class="bi bi-cash me-2"></i> Currency</span>
+                  <span class="fw-semibold">INR (₹) / USD ($)</span>
+                </li>
+                <li class="d-flex justify-content-between py-2 border-bottom">
+                  <span class="text-muted"><i class="bi bi-calendar-check me-2"></i> Ideal Stay</span>
+                  <span class="fw-semibold">3 to 7 Days</span>
+                </li>
+                <li class="d-flex justify-content-between py-2">
+                  <span class="text-muted"><i class="bi bi-laptop me-2"></i> Portfolio Status</span>
+                  <span class="fw-semibold text-success">Interactive UI Demo</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- FEATURED TOUR PROMO -->
+            <div class="tour-card">
+              <div class="tour-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Tour Package Preview">
+                <span class="tour-badge-offer">Featured Package</span>
+              </div>
+              <div class="tour-card-body">
+                <h4 class="fw-bold mb-2">Curated Experience Package</h4>
+                <p class="text-muted fs-7 mb-3">Complete itinerary including resort stay, sightseeing transfers, and guided excursions.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fs-4 font-serif text-success fw-bold">₹18,500</span>
+                  <a href="tours.html" class="btn btn-sm btn-vy-accent">View Packages</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a href="index.html" class="navbar-brand text-white fs-2 fw-bold font-serif mb-3 d-inline-block">
+            🌍 VOYAGO<span class="text-warning">.</span>
+          </a>
+          <p class="text-white opacity-75 pe-lg-4 mb-4">
+            VOYAGO is a frontend portfolio project demonstrating a modern travel discovery and tour booking experience.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tour Packages</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Popular Destinations</a></li>
+            <li><a href="destinations.html?filter=tamil-nadu">Tamil Nadu Tours</a></li>
+            <li><a href="tours.html">Featured Tours</a></li>
+            <li><a href="booking.html">Booking Demo</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Demo Information</h5>
+          <ul class="footer-links text-white opacity-75">
+            <li class="mb-2"><strong>Frontend Portfolio Project</strong></li>
+            <li class="mb-2">HTML5 · CSS3 · Bootstrap 5.3 · Vanilla JS</li>
+            <li class="d-flex align-items-center gap-2 mt-3">
+              <i class="bi bi-envelope-fill text-warning fs-5"></i>
+              <span>hello@voyago-demo.test</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-2 text-white opacity-50">&copy; 2026 VOYAGO Travel Platform. Frontend Portfolio Demo Project.</p>
+        <p class="mb-0 text-white opacity-40 fs-7">
+          VOYAGO is a fictional travel platform created for portfolio and educational demonstration purposes. It does not process real bookings, payments, authentication, or customer data.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

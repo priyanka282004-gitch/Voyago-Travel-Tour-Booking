@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Destinations — VOYAGO</title>
+  <meta name="description" content="Discover handpicked global travel destinations with Voyago. Filter by Tamil Nadu, Kerala, beach, mountain, cultural, and luxury getaways.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Voyago CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-voyago navbar-solid sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <span class="fs-3">🌍</span> VOYAGO<span>.</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="experiences.html">Experiences</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="booking.html" class="btn btn-vy-accent">Plan a Trip <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="py-5 bg-dark text-white position-relative" 
+          style="background: linear-gradient(180deg, rgba(17, 42, 31, 0.85) 0%, rgba(17, 42, 31, 0.95) 100%), url('https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+    <div class="container py-4 text-center">
+      <span class="eyebrow-text">GLOBAL & REGIONAL EXPLORATION</span>
+      <h1 class="display-4 font-serif text-white mb-3">Handpicked Destinations</h1>
+      <p class="lead opacity-75 max-w-600 mx-auto">
+        From temple cities of Tamil Nadu to serene backwaters of Kerala and iconic international capitals, discover your next getaway.
+      </p>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <div class="container">
+      
+      <!-- FILTER BAR & SEARCH -->
+      <div class="row align-items-center justify-content-between g-3 mb-5 bg-white p-3 rounded-4 shadow-sm border">
+        <div class="col-lg-8">
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn filter-btn btn-vy-primary active" data-filter="all">All Destinations</button>
+            <button class="btn filter-btn btn-vy-outline-dark" data-filter="tamil-nadu">Tamil Nadu</button>
+            <button class="btn filter-btn btn-vy-outline-dark" data-filter="kerala">Kerala</button>
+            <button class="btn filter-btn btn-vy-outline-dark" data-filter="beach">Beach</button>
+            <button class="btn filter-btn btn-vy-outline-dark" data-filter="mountain">Mountain</button>
+            <button class="btn filter-btn btn-vy-outline-dark" data-filter="cultural">Cultural</button>
+            <button class="btn filter-btn btn-vy-outline-dark" data-filter="luxury">Luxury</button>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-search text-muted"></i></span>
+            <input type="text" id="destinationSearchInput" class="form-control border-start-0 bg-light" placeholder="Search Thanjavur, Madurai, Munnar, Kanyakumari, Ooty, Goa, Wayanad...">
+          </div>
+        </div>
+      </div>
+
+      <!-- DISCOVER SOUTH INDIA FEATURE SECTION -->
+      <section class="mb-5 bg-white p-4 p-md-5 rounded-4 border shadow-sm">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-end mb-4 gap-2">
+          <div>
+            <span class="eyebrow-text"><i class="bi bi-compass me-1"></i> REGIONAL SPOTLIGHT</span>
+            <h2 class="font-serif fs-1 mb-1">Discover South India</h2>
+            <p class="text-muted mb-0">From historic temple towers to lush tea estates and peaceful coastlines.</p>
+          </div>
+          <button class="btn btn-sm btn-vy-outline-dark filter-btn" data-filter="tamil-nadu">View Tamil Nadu Trips</button>
+        </div>
+
+        <div class="row g-4" id="spotlightGrid">
+          <!-- Spotlight Cards dynamically rendered from DESTINATIONS_DATA in js/script.js -->
+        </div>
+      </section>
+
+      <!-- ALL DESTINATIONS GRID -->
+      <h3 class="font-serif fs-2 mb-4">Complete Destination Catalog</h3>
+      
+      <div class="row g-4" id="destinationsGrid">
+        <!-- Catalog Cards dynamically rendered from DESTINATIONS_DATA in js/script.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <a href="index.html" class="navbar-brand text-white fs-2 fw-bold font-serif mb-3 d-inline-block">
+            🌍 VOYAGO<span class="text-warning">.</span>
+          </a>
+          <p class="text-white opacity-75 pe-lg-4 mb-4">
+            VOYAGO is a frontend portfolio project demonstrating a modern travel discovery and tour booking experience.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="social-icon-btn" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="tours.html">Tour Packages</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links">
+            <li><a href="destinations.html">Popular Destinations</a></li>
+            <li><a href="tours.html">Featured Tours</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="booking.html">Booking Demo</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Demo Information</h5>
+          <ul class="footer-links text-white opacity-75">
+            <li class="mb-2"><strong>Frontend Portfolio Project</strong></li>
+            <li class="mb-2">HTML5 · CSS3 · Bootstrap 5.3 · Vanilla JS</li>
+            <li class="d-flex align-items-center gap-2 mt-3">
+              <i class="bi bi-envelope-fill text-warning fs-5"></i>
+              <span>hello@voyago-demo.test</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-2 text-white opacity-50">&copy; 2026 VOYAGO Travel Platform. Frontend Portfolio Demo Project.</p>
+        <p class="mb-0 text-white opacity-40 fs-7">
+          VOYAGO is a fictional travel platform created for portfolio and educational demonstration purposes. It does not process real bookings, payments, authentication, or customer data.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
