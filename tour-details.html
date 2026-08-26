@@ -51,7 +51,7 @@
         <ol class="breadcrumb mb-0 fs-7">
           <li class="breadcrumb-item"><a href="index.html" class="text-success text-decoration-none">Home</a></li>
           <li class="breadcrumb-item"><a href="tours.html" class="text-success text-decoration-none">Tours</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Bali Tropical Bliss Tour</li>
+          <li class="breadcrumb-item active" aria-current="page" id="breadcrumbTourTitle">Bali Tropical Bliss Tour</li>
         </ol>
       </nav>
     </div>
@@ -63,18 +63,18 @@
       <!-- TOUR HEADER -->
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-4 gap-3">
         <div>
-          <span class="badge bg-success px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
+          <span class="badge bg-success px-3 py-2 rounded-pill fw-bold text-uppercase mb-2" id="tourDurationBadge">
             <i class="bi bi-clock me-1"></i> 5 Days / 4 Nights
           </span>
-          <h1 class="display-5 font-serif mb-1">Bali Tropical Bliss & Cultural Heritage</h1>
-          <p class="text-muted mb-0">
+          <h1 class="display-5 font-serif mb-1" id="tourTitle">Bali Tropical Bliss & Cultural Heritage</h1>
+          <p class="text-muted mb-0" id="tourMeta">
             <i class="bi bi-geo-alt-fill text-success me-1"></i> Bali, Indonesia &nbsp;|&nbsp; 
             <i class="bi bi-star-fill text-warning me-1"></i> Featured Itinerary
           </p>
         </div>
         <div>
           <span class="d-block text-muted fs-7 text-uppercase fw-bold text-md-end">Sample Package Price</span>
-          <span class="fs-2 font-serif text-success fw-bold">₹34,999</span>
+          <span class="fs-2 font-serif text-success fw-bold" id="tourPriceMain">₹34,999</span>
           <span class="text-muted fs-7">/ person</span>
         </div>
       </div>
@@ -82,11 +82,11 @@
       <!-- GALLERY -->
       <div class="row g-3 mb-5">
         <div class="col-lg-8">
-          <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80" alt="Bali Resort Villa" class="w-100 h-100 rounded-4 object-fit-cover" style="min-height: 380px;">
+          <img id="tourMainImg" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=1200&q=80" alt="Bali Resort Villa" class="w-100 h-100 rounded-4 object-fit-cover" style="min-height: 380px;">
         </div>
         <div class="col-lg-4 d-flex flex-column gap-3">
-          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali Rice Terraces" class="w-100 rounded-4 object-fit-cover" style="height: 185px;">
-          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Bali Ocean Pool" class="w-100 rounded-4 object-fit-cover" style="height: 185px;">
+          <img id="tourThumbImg1" src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali Rice Terraces" class="w-100 rounded-4 object-fit-cover" style="height: 185px;">
+          <img id="tourThumbImg2" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" alt="Bali Ocean Pool" class="w-100 rounded-4 object-fit-cover" style="height: 185px;">
         </div>
       </div>
 
@@ -96,22 +96,22 @@
           <div class="col-6 col-md-3">
             <i class="bi bi-people-fill fs-2 text-success mb-2 d-block"></i>
             <span class="fs-7 text-uppercase text-muted fw-bold d-block">Group Size</span>
-            <span class="fw-semibold">Small Group (Max 12)</span>
+            <span class="fw-semibold" id="tourGroupSize">Small Group (Max 12)</span>
           </div>
           <div class="col-6 col-md-3">
             <i class="bi bi-translate fs-2 text-success mb-2 d-block"></i>
             <span class="fs-7 text-uppercase text-muted fw-bold d-block">Language</span>
-            <span class="fw-semibold">English / Balinese</span>
+            <span class="fw-semibold" id="tourLanguage">English / Balinese</span>
           </div>
           <div class="col-6 col-md-3">
             <i class="bi bi-cup-hot-fill fs-2 text-success mb-2 d-block"></i>
             <span class="fs-7 text-uppercase text-muted fw-bold d-block">Meals</span>
-            <span class="fw-semibold">Daily Breakfast + 2 Dinners</span>
+            <span class="fw-semibold" id="tourMeals">Daily Breakfast + 2 Dinners</span>
           </div>
           <div class="col-6 col-md-3">
             <i class="bi bi-car-front-fill fs-2 text-success mb-2 d-block"></i>
             <span class="fs-7 text-uppercase text-muted fw-bold d-block">Transport</span>
-            <span class="fw-semibold">AC Van & Speedboat</span>
+            <span class="fw-semibold" id="tourTransport">AC Van & Speedboat</span>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@
           
           <section class="mb-5">
             <h3 class="font-serif fs-2 mb-3">Tour Overview</h3>
-            <p class="text-muted lead fs-6">
+            <p class="text-muted lead fs-6" id="tourOverview">
               Immerse yourself in the enchanting culture and breathtaking landscapes of Bali. This carefully designed 5-day tour covers sacred monkey forests, emerald rice terraces, sea temples, and an unforgettable speedboat day excursion to Nusa Penida island.
             </p>
           </section>
@@ -132,77 +132,7 @@
             <h3 class="font-serif fs-2 mb-4">Day-by-Day Itinerary</h3>
             
             <div class="accordion custom-accordion" id="tourItineraryAccordion">
-              
-              <!-- Day 1 -->
-              <div class="accordion-item border rounded-3 mb-3">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <span class="badge bg-success me-3">Day 1</span> Arrival in Bali & Jimbaran Sunset Welcome Dinner
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#tourItineraryAccordion">
-                  <div class="accordion-body text-muted fs-6">
-                    Arrive at Ngurah Rai International Airport (DPS) where your driver greets you. Transfer to your boutique hotel in Seminyak. In the evening, enjoy a fresh seafood candle-light welcome dinner right on the sands of Jimbaran Bay.
-                  </div>
-                </div>
-              </div>
-
-              <!-- Day 2 -->
-              <div class="accordion-item border rounded-3 mb-3">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <span class="badge bg-success me-3">Day 2</span> Sacred Ubud Monkey Forest & Tegallalang Rice Terraces
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#tourItineraryAccordion">
-                  <div class="accordion-body text-muted fs-6">
-                    After breakfast, embark on a full-day tour of Ubud. Walk through the lush Sacred Monkey Forest Sanctuary, marvel at the cascading Tegallalang Rice Terraces, try the famous Bali Jungle Swing, and taste authentic Luwak coffee at a traditional plantation.
-                  </div>
-                </div>
-              </div>
-
-              <!-- Day 3 -->
-              <div class="accordion-item border rounded-3 mb-3">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <span class="badge bg-success me-3">Day 3</span> Nusa Penida Island Speedboat Day Trip & Snorkeling
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#tourItineraryAccordion">
-                  <div class="accordion-body text-muted fs-6">
-                    Board an early morning fast boat to Nusa Penida island. Visit iconic natural landmarks including Kelingking T-Rex Beach, Angel’s Billabong, and Broken Beach. Swim in the crystal-clear waters of Crystal Bay with colorful coral reefs and marine life.
-                  </div>
-                </div>
-              </div>
-
-              <!-- Day 4 -->
-              <div class="accordion-item border rounded-3 mb-3">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <span class="badge bg-success me-3">Day 4</span> Tanah Lot Temple Sunset & Balinese Spa Massage
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#tourItineraryAccordion">
-                  <div class="accordion-body text-muted fs-6">
-                    Spend a relaxing morning at your leisure or relaxing by the hotel pool. In the afternoon, enjoy a signature Balinese aromatherapy spa treatment followed by a trip to Tanah Lot Temple to watch one of the world's most spectacular ocean sunsets.
-                  </div>
-                </div>
-              </div>
-
-              <!-- Day 5 -->
-              <div class="accordion-item border rounded-3 mb-3">
-                <h2 class="accordion-header" id="headingFive">
-                  <button class="accordion-button collapsed fw-bold fs-6" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    <span class="badge bg-success me-3">Day 5</span> Souvenir Art Market & Departure Airport Transfer
-                  </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#tourItineraryAccordion">
-                  <div class="accordion-body text-muted fs-6">
-                    Enjoy your final breakfast at the resort. Visit the local Kuta Art Market for handmade crafts, wooden souvenirs, and local spices before your driver transfers you back to the airport for your return flight home.
-                  </div>
-                </div>
-              </div>
-
+              <!-- Rendered dynamically -->
             </div>
           </section>
 
@@ -212,22 +142,15 @@
             <div class="row g-4">
               <div class="col-md-6">
                 <h5 class="fw-bold text-success mb-3"><i class="bi bi-check-circle-fill me-2"></i> What's Included</h5>
-                <ul class="list-unstyled text-muted fs-6">
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-2 fw-bold"></i> 4 Nights accommodation in 4-Star Resort</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-2 fw-bold"></i> Daily buffet breakfast & 2 specialty dinners</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-2 fw-bold"></i> Airport pickup & drop by private AC vehicle</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-2 fw-bold"></i> Nusa Penida fast boat return tickets</li>
-                  <li class="mb-2"><i class="bi bi-check2 text-success me-2 fw-bold"></i> Sightseeing entry tickets & guide</li>
+                <ul class="list-unstyled text-muted fs-6" id="tourInclusions">
+                  <!-- Rendered dynamically -->
                 </ul>
               </div>
 
               <div class="col-md-6">
                 <h5 class="fw-bold text-danger mb-3"><i class="bi bi-x-circle-fill me-2"></i> What's Excluded</h5>
-                <ul class="list-unstyled text-muted fs-6">
-                  <li class="mb-2"><i class="bi bi-x text-danger me-2 fw-bold"></i> International airfare / flights</li>
-                  <li class="mb-2"><i class="bi bi-x text-danger me-2 fw-bold"></i> Indonesia Visa on Arrival fee ($35 USD)</li>
-                  <li class="mb-2"><i class="bi bi-x text-danger me-2 fw-bold"></i> Personal expenses & laundry services</li>
-                  <li class="mb-2"><i class="bi bi-x text-danger me-2 fw-bold"></i> Travel insurance (available as add-on)</li>
+                <ul class="list-unstyled text-muted fs-6" id="tourExclusions">
+                  <!-- Rendered dynamically -->
                 </ul>
               </div>
             </div>
@@ -240,13 +163,13 @@
           <div class="sticky-top" style="top: 100px;">
             <div class="bg-white p-4 rounded-4 border shadow-sm">
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <span class="fs-4 font-serif text-success fw-bold">₹34,999</span>
+                <span class="fs-4 font-serif text-success fw-bold" id="tourPriceSidebar">₹34,999</span>
                 <span class="badge bg-warning text-dark">Sample Offer</span>
               </div>
               <p class="text-muted fs-7 mb-4">Sample price per person based on twin sharing basis. Inclusive of all taxes.</p>
 
               <form action="booking.html" method="GET">
-                <input type="hidden" name="package" value="Bali Tropical Bliss Tour">
+                <input type="hidden" name="package" id="tourPackageInput" value="Bali Tropical Bliss Tour">
                 
                 <div class="mb-3">
                   <label class="form-label fs-7 fw-bold text-uppercase text-muted">Select Date</label>
