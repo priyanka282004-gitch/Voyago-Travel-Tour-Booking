@@ -18,7 +18,8 @@ const DESTINATIONS_DATA = [
     price: '₹16,999',
     badge: 'Heritage',
     image: 'images/Madurai.avif',
-    alt: 'Madurai Meenakshi Amman Temple'
+    alt: 'Madurai Meenakshi Amman Temple',
+    gallery: ['images/Madurai.avif', 'images/Madurai secondary image.jpg', 'images/Madurai secondary image.2.jpg']
   },
   {
     id: 'kanyakumari',
@@ -29,7 +30,8 @@ const DESTINATIONS_DATA = [
     price: '₹15,500',
     badge: 'Coastal Landmark',
     image: 'images/Kanyakumari.webp',
-    alt: 'Kanyakumari Vivekananda Rock Memorial'
+    alt: 'Kanyakumari Vivekananda Rock Memorial',
+    gallery: ['images/Kanyakumari.webp', 'images/Kanyakumari-Secondary img.jpg', 'images/Kanyakumari-Secondary img.2.jpg']
   },
   {
     id: 'thanjavur',
@@ -40,7 +42,8 @@ const DESTINATIONS_DATA = [
     price: '₹15,999',
     badge: 'UNESCO Heritage',
     image: 'images/Thanjavur.webp',
-    alt: 'Thanjavur Brihadeeswarar Temple'
+    alt: 'Thanjavur Brihadeeswarar Temple',
+    gallery: ['images/Thanjavur.webp', 'images/Thanjavur-secondary img..jpg', 'images/Thanjavur-secondary img.2..avif']
   },
   {
     id: 'ooty',
@@ -51,7 +54,8 @@ const DESTINATIONS_DATA = [
     price: '₹18,500',
     badge: 'Hill Station',
     image: 'images/Ooty.jpg',
-    alt: 'Ooty Nilgiri Hills tea plantations'
+    alt: 'Ooty Nilgiri Hills tea plantations',
+    gallery: ['images/Ooty.jpg', 'images/Ooty-secondary img.webp', 'images/Ooty-secondary img.2.png']
   },
   {
     id: 'kodaikanal',
@@ -62,7 +66,8 @@ const DESTINATIONS_DATA = [
     price: '₹19,000',
     badge: 'Nature Retreat',
     image: 'images/Kodaikanal.jpg',
-    alt: 'Kodaikanal lake and pine forest'
+    alt: 'Kodaikanal lake and pine forest',
+    gallery: ['images/Kodaikanal.jpg', 'images/Kodaikanal.secondary img.jpg', 'images/Kodaikanal.secondary img.2.jpg']
   },
   {
     id: 'rameshwaram',
@@ -73,7 +78,8 @@ const DESTINATIONS_DATA = [
     price: '₹17,500',
     badge: 'Coastal Pilgrimage',
     image: 'images/Rameshwaram.jpg',
-    alt: 'Rameshwaram Ramanathaswamy Temple'
+    alt: 'Rameshwaram Ramanathaswamy Temple',
+    gallery: ['images/Rameshwaram.jpg', 'images/Rameshwaram-secondary img.jpg', 'images/Rameshwaram-secondary img.2.avif']
   },
   {
     id: 'delhi',
@@ -84,7 +90,8 @@ const DESTINATIONS_DATA = [
     price: '₹22,999',
     badge: 'Heritage & Wonders',
     image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80',
-    alt: 'Taj Mahal in Agra, India'
+    alt: 'Taj Mahal in Agra, India',
+    gallery: ['https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80', 'images/Delhi-Secondary Img.jpg', 'images/Delhi-Secondary img.2.jpg']
   },
   {
     id: 'munnar',
@@ -95,7 +102,8 @@ const DESTINATIONS_DATA = [
     price: '₹21,000',
     badge: 'Tea Plantations',
     image: 'images/Munnar.webp',
-    alt: 'Munnar tea plantations in Kerala'
+    alt: 'Munnar tea plantations in Kerala',
+    gallery: ['images/Munnar.webp', 'images/Munnar.Secondary-img.webp', 'images/Munnar.Secondary-img.2.jpg']
   },
   {
     id: 'wayanad',
@@ -106,7 +114,8 @@ const DESTINATIONS_DATA = [
     price: '₹19,500',
     badge: 'Western Ghats',
     image: 'images/Wayanad.jpg',
-    alt: 'Wayanad Western Ghats landscape'
+    alt: 'Wayanad Western Ghats landscape',
+    gallery: ['images/Wayanad.jpg', 'images/Wayanad-secondary img.webp', 'images/Wayanad-secondary img.2.webp']
   },
   {
     id: 'alappuzha',
@@ -117,7 +126,8 @@ const DESTINATIONS_DATA = [
     price: '₹24,000',
     badge: 'Backwaters',
     image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80',
-    alt: 'Alleppey Kerala backwaters houseboat'
+    alt: 'Alleppey Kerala backwaters houseboat',
+    gallery: ['https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80', 'images/Alappuzha-secondary img.jpg', 'images/Alappuzha-secondary img.2.webp']
   },
   {
     id: 'kovalam',
@@ -128,7 +138,8 @@ const DESTINATIONS_DATA = [
     price: '₹22,500',
     badge: 'Beach Resort',
     image: 'images/Kovalam.jpg',
-    alt: 'Kovalam Lighthouse Beach Kerala'
+    alt: 'Kovalam Lighthouse Beach Kerala',
+    gallery: ['images/Kovalam.jpg', 'images/Kovalam.secondary img.jpg', 'images/Kovalam.secondary img.2.jpg']
   },
   {
     id: 'varkala',
@@ -139,7 +150,8 @@ const DESTINATIONS_DATA = [
     price: '₹20,500',
     badge: 'Cliff Beach',
     image: 'images/Varkala.avif',
-    alt: 'Red sandstone cliff overlooking Arabian Sea in Varkala'
+    alt: 'Red sandstone cliff overlooking Arabian Sea in Varkala',
+    gallery: ['images/Varkala.avif', 'images/Varkala.secondary-img.png', 'images/Varkala.secondary-img.2.jpg']
   },
   {
     id: 'jaipur',
@@ -150,7 +162,8 @@ const DESTINATIONS_DATA = [
     price: '₹22,000',
     badge: 'Heritage',
     image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
-    alt: 'Jaipur Hawa Mahal'
+    alt: 'Jaipur Hawa Mahal',
+    gallery: ['https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80', 'images/Jaipur-secondary img.jpg', 'images/Jaipur-secondary img.2.jpg']
   },
   {
     id: 'goa',
@@ -161,7 +174,8 @@ const DESTINATIONS_DATA = [
     price: '₹25,000',
     badge: 'Coastal',
     image: 'images/Goa.avif',
-    alt: 'Tropical palm beach in Goa'
+    alt: 'Tropical palm beach in Goa',
+    gallery: ['images/Goa.avif', 'images/Goa-secondary img.webp', 'images/Goa-secondary img.2.avif']
   },
   {
     id: 'manali',
@@ -172,7 +186,8 @@ const DESTINATIONS_DATA = [
     price: '₹18,999',
     badge: 'Himalayas',
     image: 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80',
-    alt: 'Manali Himalayas snow peaks'
+    alt: 'Manali Himalayas snow peaks',
+    gallery: ['https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80', 'images/Manali-secondary img.webp', 'images/Manali-secondary img.2.webp']
   },
   {
     id: 'bali',
@@ -183,7 +198,8 @@ const DESTINATIONS_DATA = [
     price: '₹34,999',
     badge: 'Featured',
     image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80',
-    alt: 'Bali rice terraces and temple'
+    alt: 'Bali rice terraces and temple',
+    gallery: ['https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80']
   },
   {
     id: 'paris',
@@ -194,7 +210,8 @@ const DESTINATIONS_DATA = [
     price: '₹68,500',
     badge: 'Featured',
     image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80',
-    alt: 'Eiffel Tower Paris skyline'
+    alt: 'Eiffel Tower Paris skyline',
+    gallery: ['https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80', 'images/paris-secondary img.jpg', 'images/paris-secondary img.2.jpg']
   },
   {
     id: 'dubai',
@@ -205,7 +222,8 @@ const DESTINATIONS_DATA = [
     price: '₹54,999',
     badge: 'Featured',
     image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80',
-    alt: 'Dubai Burj Khalifa skyline'
+    alt: 'Dubai Burj Khalifa skyline',
+    gallery: ['https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80', 'images/Dubai-secondary img..jpg', 'images/Dubai-secondary img.2.avif']
   },
   {
     id: 'maldives',
@@ -216,7 +234,8 @@ const DESTINATIONS_DATA = [
     price: '₹72,000',
     badge: 'Featured',
     image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80',
-    alt: 'Maldives overwater bungalows'
+    alt: 'Maldives overwater bungalows',
+    gallery: ['https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=800&q=80', 'images/maldives-secondary img.jpg', 'images/maldives-secondary img.2.jpg']
   }
 ];
 
@@ -663,8 +682,13 @@ function initDestinationDetailsPage() {
 
   const urlParams = new URLSearchParams(window.location.search);
   const destParam = (urlParams.get('name') || urlParams.get('dest') || 'delhi').toLowerCase().trim();
+  const cleanParam = destParam.replace(/[^a-z0-9]/g, '');
 
-  const destData = DESTINATIONS_DATA.find(d => d.id === destParam || d.name.toLowerCase().includes(destParam)) || DESTINATIONS_DATA.find(d => d.id === 'delhi');
+  const destData = DESTINATIONS_DATA.find(d => {
+    const cleanId = d.id.replace(/[^a-z0-9]/g, '');
+    const cleanName = d.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return cleanId === cleanParam || cleanName.includes(cleanParam) || cleanParam.includes(cleanId);
+  }) || DESTINATIONS_DATA.find(d => d.id === 'delhi');
 
   if (destData) {
     destTitleEl.textContent = destData.name;
@@ -680,8 +704,23 @@ function initDestinationDetailsPage() {
 
     const mainImgEl = document.getElementById('destMainImg');
     if (mainImgEl) {
-      mainImgEl.src = destData.image;
-      mainImgEl.alt = destData.alt;
+      const mainSrc = (destData.gallery && destData.gallery[0]) || destData.image;
+      mainImgEl.src = mainSrc;
+      mainImgEl.alt = destData.alt || destData.name;
+    }
+
+    const secImg1El = document.getElementById('destSecImg1');
+    if (secImg1El) {
+      const sec1Src = (destData.gallery && destData.gallery[1]) || destData.image;
+      secImg1El.src = sec1Src;
+      secImg1El.alt = `${destData.name} View 2`;
+    }
+
+    const secImg2El = document.getElementById('destSecImg2');
+    if (secImg2El) {
+      const sec2Src = (destData.gallery && destData.gallery[2]) || destData.image;
+      secImg2El.src = sec2Src;
+      secImg2El.alt = `${destData.name} View 3`;
     }
 
     const descLeadEl = document.getElementById('destDescLead');
